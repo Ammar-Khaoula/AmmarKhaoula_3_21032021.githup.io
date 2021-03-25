@@ -31,6 +31,7 @@ footer{
       list-style-type: none;
       .link-fas{
           display: flex;
+          
           .fas{
               position: relative;
               top: 15px;
@@ -39,8 +40,7 @@ footer{
       }
       a{
           text-decoration: none;
-          color: white;
-          
+          color: white;          
       }
       #contacte{
           position: relative;
@@ -48,8 +48,5 @@ footer{
      }
   }
 
-    @media all and (max-width:768px){
-
-    }
 }
 
