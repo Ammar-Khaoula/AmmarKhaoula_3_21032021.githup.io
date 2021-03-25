@@ -1,0 +1,37 @@
+$primaryColor:#9356DC;
+$secondColor:#FF79DA;
+$tertiaireColor:#99E2D0;
+
+header{
+    position: fixed;
+    left: 25rem;
+    @media all and (max-width:768px){
+        position: fixed;
+        left: 150px;
+        img{
+            width: 150px;
+            
+        }
+    }  
+}
+
+    /* footer */
+footer{
+    background-color: black;
+    color: white;
+  h1{
+    font-family: 'Roboto Slab', serif;
+  }
+  li{
+      list-style-type: none;
+      a{
+          text-decoration: none;
+          color: white;
+      }
+  }
+
+    @media all and (max-width:768px){
+
+    }
+}
+

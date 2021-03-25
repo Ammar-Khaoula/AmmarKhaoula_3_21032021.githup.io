@@ -1,0 +1,31 @@
+header {
+  position: fixed;
+  left: 25rem;
+}
+@media all and (max-width: 768px) {
+  header {
+    position: fixed;
+    left: 150px;
+  }
+  header img {
+    width: 150px;
+  }
+}
+
+/* footer */
+footer {
+  background-color: black;
+  color: white;
+}
+footer h1 {
+  font-family: "Roboto Slab", serif;
+}
+footer li {
+  list-style-type: none;
+}
+footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
