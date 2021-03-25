@@ -19,15 +19,33 @@ header{
 footer{
     background-color: black;
     color: white;
+    padding-top: 15px;
+    padding-bottom: 30px;
+      
   h1{
     font-family: 'Roboto Slab', serif;
+    font-style: italic;
+    padding-left: 25px;
   }
   li{
       list-style-type: none;
+      .link-fas{
+          display: flex;
+          .fas{
+              position: relative;
+              top: 15px;
+              right: 10px;
+          }
+      }
       a{
           text-decoration: none;
           color: white;
+          
       }
+      #contacte{
+          position: relative;
+          top: 20px;
+     }
   }
 
     @media all and (max-width:768px){
