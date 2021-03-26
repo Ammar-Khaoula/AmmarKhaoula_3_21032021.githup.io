@@ -51,6 +51,52 @@ nav .menu1 .fa-map-marker {
   }
 }
 
+/* main */
+main .link {
+  display: flex;
+  border: 0px black solid;
+  border-radius: 15px;
+  -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+  margin: 20px;
+  width: 330px;
+  height: 70px;
+}
+main .link .fas {
+  color: grey;
+  font-size: 20px;
+  transform: scale(1);
+  transition: transform 50ms;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+main .link .fas:hover {
+  transform: scale(1.15);
+  color: #9356DC;
+}
+main .link span {
+  border: 0px black solid;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin-top: 15px;
+  margin-right: 30px;
+  padding: 10px;
+  position: relative;
+  right: 10px;
+  background-color: #9356DC;
+  color: white;
+  font-weight: bolder;
+}
+main .link:hover {
+  background-color: #f2dcfa;
+}
+main a {
+  text-decoration: none;
+  color: black;
+}
+
 /* footer */
 footer {
   background-color: black;
