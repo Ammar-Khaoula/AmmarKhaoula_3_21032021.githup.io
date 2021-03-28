@@ -1,4 +1,5 @@
 $primaryColor:#9356DC;
+$opacityprimo:rgba(147,86,220,0.2);
 $secondColor:#FF79DA;
 $tertiaireColor:#99E2D0;
 
@@ -68,8 +69,12 @@ main{
                -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
                box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
                margin: 20px ;
-               width: 330px;
+               width: 300px;
                height: 70px;
+               position: relative;
+               background-color: $primaryColor,0;
+               transition: transform 100ms background-color 0.1ms;
+               
                .fas{
                    color: grey;
                    font-size: 20px;
@@ -97,8 +102,8 @@ main{
                    font-weight: bolder;
                }
                &:hover{
-                   background-color:rgb(242, 220, 250);
-                   
+                    transform: scale(1.13);
+                    background-color: $opacityprimo;                  
                }
                
            }
@@ -112,6 +117,56 @@ main{
     
 
 }
+          /* Section */
+section{
+   background-color: rgb(247, 242, 242);
+   .menu-resto{
+       border: 0px black solid;
+       border-radius: 20px;
+       -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
+       -moz-box-shadow:3px 3px 9px 0px rgba(0, 0, 0, 0.24);
+       box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
+       background-color: white;
+       width: 300px;
+       margin-left: 20px;
+       .fa-heart{
+           float: right;
+           padding-right: 10px;
+           font-size: 30px;
+           &:hover{
+            background:linear-gradient(to top, $secondColor, $primaryColor);
+           }
+       }
+       .plats{
+
+       }
+       a{
+           text-decoration: none;
+           color: black;
+       }
+       h3{
+           color: #0d8869;
+           background-color: $tertiaireColor;
+           border: 0px black solid;
+           width: 90px;
+           height: 30px;
+           margin-left: 60px;
+           padding-left: 20px;
+           position: relative;
+           bottom: 210px;
+           left: 100px;
+           font-size: 20px;
+       }
+    img{
+        width:300px ;
+        height: 200px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        
+    }
+   } 
+  
+}
 
     /* footer */
 footer{
@@ -119,7 +174,7 @@ footer{
     color: white;
     padding-top: 15px;
     padding-bottom: 30px;
-      
+    margin-top: 10px;  
   h1{
     font-family: 'Roboto Slab', serif;
     font-style: italic;

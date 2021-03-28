@@ -60,8 +60,11 @@ main .link {
   -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
   box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
   margin: 20px;
-  width: 330px;
+  width: 300px;
   height: 70px;
+  position: relative;
+  background-color: #9356DC, 0;
+  transition: transform 100ms background-color 0.1ms;
 }
 main .link .fas {
   color: grey;
@@ -90,11 +93,58 @@ main .link span {
   font-weight: bolder;
 }
 main .link:hover {
-  background-color: #f2dcfa;
+  transform: scale(1.13);
+  background-color: rgba(147, 86, 220, 0.2);
 }
 main a {
   text-decoration: none;
   color: black;
+}
+
+/* Section */
+section {
+  background-color: #f7f2f2;
+}
+section .menu-resto {
+  border: 0px black solid;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
+  background-color: white;
+  width: 300px;
+  margin-left: 20px;
+}
+section .menu-resto .fa-heart {
+  float: right;
+  padding-right: 10px;
+  font-size: 30px;
+}
+section .menu-resto .fa-heart:hover {
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+}
+section .menu-resto a {
+  text-decoration: none;
+  color: black;
+}
+section .menu-resto h3 {
+  color: #0d8869;
+  background-color: #99E2D0;
+  border: 0px black solid;
+  width: 90px;
+  height: 30px;
+  margin-left: 60px;
+  padding-left: 20px;
+  position: relative;
+  bottom: 210px;
+  left: 100px;
+  font-size: 20px;
+}
+section .menu-resto img {
+  width: 300px;
+  height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /* footer */
@@ -103,6 +153,7 @@ footer {
   color: white;
   padding-top: 15px;
   padding-bottom: 30px;
+  margin-top: 10px;
 }
 footer h1 {
   font-family: "Roboto Slab", serif;
