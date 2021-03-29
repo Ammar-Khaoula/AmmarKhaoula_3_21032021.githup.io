@@ -113,15 +113,27 @@ section .menu-resto {
   box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
   background-color: white;
   width: 300px;
+  height: 300px;
+  margin-top: 20px;
   margin-left: 20px;
 }
 section .menu-resto .fa-heart {
   float: right;
+  position: relative;
+  bottom: 50px;
   padding-right: 10px;
   font-size: 30px;
+  transform: scale(1);
+  transition: transform 50ms, linear 100ms;
 }
 section .menu-resto .fa-heart:hover {
-  background: linear-gradient(to top, #FF79DA, #9356DC);
+  transform: scale(1.13);
+  color: #9356DC;
+}
+section .menu-resto .plats {
+  padding: 10px;
+  position: relative;
+  bottom: 80px;
 }
 section .menu-resto a {
   text-decoration: none;
@@ -139,6 +151,9 @@ section .menu-resto h3 {
   bottom: 210px;
   left: 100px;
   font-size: 20px;
+}
+section .menu-resto .sans-nouveau {
+  opacity: 0;
 }
 section .menu-resto img {
   width: 300px;
