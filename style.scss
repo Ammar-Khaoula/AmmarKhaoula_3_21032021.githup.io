@@ -14,6 +14,10 @@ header{
     }  
 } 
               /* nav */
+%family{
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+}
 nav{
     text-align: center;
     padding-top: 10px;
@@ -21,8 +25,7 @@ nav{
         background-color: rgb(243, 243, 242);
         padding-bottom: 40px;
         h2{
-            font-family: 'Roboto Slab', serif;
-            font-size: 30px;
+           @extend%family; 
         }
         P{
             font-size: 20px;
@@ -60,30 +63,27 @@ nav{
 
 }
                /* main */
+%border{
+    border: 0px black solid;
+    border-radius: 15px;
+    -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+    box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+}
 main{ 
            .link{
                display: flex;
-               border: 0px black solid;
-               border-radius: 15px;
-               -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
-               -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
-               box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+               @extend %border;
                margin: 20px ;
-               width: 300px;
+               padding:auto, 5px;
                height: 70px;
-               position: relative;
-               background-color: $primaryColor,0;
-               transition: transform 100ms background-color 0.1ms;
-               
+
                .fas{
                    color: grey;
                    font-size: 20px;
-                   transform: scale(1);
-                   transition: transform 50ms;
                    padding-top:20px;
                    padding-right: 20px;
                    &:hover{
-                       transform: scale(1.15);
                        color: $primaryColor;
                    }
                }
@@ -102,7 +102,6 @@ main{
                    font-weight: bolder;
                }
                &:hover{
-                    transform: scale(1.13);
                     background-color: $opacityprimo;                  
                }
                
@@ -119,13 +118,10 @@ main{
 }
           /* Section */
 section{
-   background-color: rgb(247, 242, 242);
+   background-color: rgb(246, 248, 248);
+   padding-bottom: 35px;
    .menu-resto{
-       border: 0px black solid;
-       border-radius: 20px;
-       -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
-       -moz-box-shadow:3px 3px 9px 0px rgba(0, 0, 0, 0.24);
-       box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
+       @extend %border;
        background-color: white;
        width: 300px;
        height: 300px;
@@ -182,6 +178,57 @@ section{
   
 }
 
+          /* manu-food */
+.menu-food{
+    border: 0px black solid;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px; 
+    position: relative;
+    bottom: 60px; 
+    h1{
+        @extend%family;
+        font-style: italic;
+        padding-top: 20px;
+     }
+     .fa-heart{
+         font-size: 25px;
+         transform: translate(300px,-8vh);
+     }
+     article{
+         h3{
+             text-transform: uppercase;
+             color:rgb(48, 47, 47);
+             border-bottom:4px $tertiaireColor solid;
+             width: 55px;
+         }
+         .link-food{
+            @extend%border;
+            height: 80px;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-left:10px;
+            background-color: white;
+            a{
+                text-decoration: none;
+                color: black;
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    color: rgb(39, 39, 39);
+                    font-size: 15px;
+                }
+                span{
+                    transform: translate(0px,-5vh); 
+                    padding-right: 20px;
+                    float: right;
+                    font-weight: bolder;
+                }
+            }
+         }
+     }
+}
+
 
     /* footer */
 footer{
@@ -189,7 +236,6 @@ footer{
     color: white;
     padding-top: 15px;
     padding-bottom: 30px;
-    margin-top: 10px;  
   h1{
     font-family: 'Roboto Slab', serif;
     font-style: italic;

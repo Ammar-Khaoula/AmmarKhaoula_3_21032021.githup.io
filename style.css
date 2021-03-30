@@ -8,6 +8,11 @@ header {
 }
 
 /* nav */
+.menu-food h1, nav #menu h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+
 nav {
   text-align: center;
   padding-top: 10px;
@@ -15,10 +20,6 @@ nav {
 nav #menu {
   background-color: #f3f3f2;
   padding-bottom: 40px;
-}
-nav #menu h2 {
-  font-family: "Roboto Slab", serif;
-  font-size: 30px;
 }
 nav #menu P {
   font-size: 20px;
@@ -52,30 +53,27 @@ nav .menu1 .fa-map-marker {
 }
 
 /* main */
-main .link {
-  display: flex;
+.menu-food article .link-food, section .menu-resto, main .link {
   border: 0px black solid;
   border-radius: 15px;
   -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
   -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
   box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+}
+
+main .link {
+  display: flex;
   margin: 20px;
-  width: 300px;
+  padding: auto, 5px;
   height: 70px;
-  position: relative;
-  background-color: #9356DC, 0;
-  transition: transform 100ms background-color 0.1ms;
 }
 main .link .fas {
   color: grey;
   font-size: 20px;
-  transform: scale(1);
-  transition: transform 50ms;
   padding-top: 20px;
   padding-right: 20px;
 }
 main .link .fas:hover {
-  transform: scale(1.15);
   color: #9356DC;
 }
 main .link span {
@@ -93,7 +91,6 @@ main .link span {
   font-weight: bolder;
 }
 main .link:hover {
-  transform: scale(1.13);
   background-color: rgba(147, 86, 220, 0.2);
 }
 main a {
@@ -103,14 +100,10 @@ main a {
 
 /* Section */
 section {
-  background-color: #f7f2f2;
+  background-color: #f6f8f8;
+  padding-bottom: 35px;
 }
 section .menu-resto {
-  border: 0px black solid;
-  border-radius: 20px;
-  -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
-  box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.24);
   background-color: white;
   width: 300px;
   height: 300px;
@@ -162,13 +155,59 @@ section .menu-resto img {
   border-top-right-radius: 15px;
 }
 
+/* manu-food */
+.menu-food {
+  border: 0px black solid;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  bottom: 60px;
+}
+.menu-food h1 {
+  font-style: italic;
+  padding-top: 20px;
+}
+.menu-food .fa-heart {
+  font-size: 25px;
+  transform: translate(300px, -8vh);
+}
+.menu-food article h3 {
+  text-transform: uppercase;
+  color: #302f2f;
+  border-bottom: 4px #99E2D0 solid;
+  width: 55px;
+}
+.menu-food article .link-food {
+  height: 80px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  background-color: white;
+}
+.menu-food article .link-food a {
+  text-decoration: none;
+  color: black;
+}
+.menu-food article .link-food a h2 {
+  font-size: 20px;
+}
+.menu-food article .link-food a p {
+  color: #272727;
+  font-size: 15px;
+}
+.menu-food article .link-food a span {
+  transform: translate(0px, -5vh);
+  padding-right: 20px;
+  float: right;
+  font-weight: bolder;
+}
+
 /* footer */
 footer {
   background-color: black;
   color: white;
   padding-top: 15px;
   padding-bottom: 30px;
-  margin-top: 10px;
 }
 footer h1 {
   font-family: "Roboto Slab", serif;
