@@ -54,7 +54,7 @@ nav .menu1 .fa-map-marker {
 }
 
 /* main */
-.menu-food article .link-food, section .menu-resto, main .link {
+.menu-food article .link-food #icon, .menu-food article .link-food, section .menu-resto, main .link {
   border: 0px black solid;
   border-radius: 15px;
   -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
@@ -184,6 +184,9 @@ section .menu-resto a img {
   border: 0px black solid;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+}
+
+.menu-food {
   position: relative;
   bottom: 60px;
 }
@@ -207,10 +210,13 @@ section .menu-resto a img {
   width: 55px;
 }
 .menu-food article .link-food {
+  display: flex;
+  justify-content: space-between;
   height: 80px;
   margin-left: 5px;
   margin-right: 5px;
   padding-left: 10px;
+  margin-bottom: 30px;
   background-color: white;
 }
 .menu-food article .link-food a {
@@ -224,11 +230,29 @@ section .menu-resto a img {
   color: #272727;
   font-size: 15px;
 }
-.menu-food article .link-food a span {
-  transform: translate(0px, -5vh);
-  padding-right: 50px;
-  float: right;
+.menu-food article .link-food #prix {
+  margin-top: 35px;
   font-weight: bolder;
+}
+.menu-food article .link-food #icon {
+  background-color: #99E2D0;
+  width: 40px;
+  height: 50px;
+  padding-left: 40px;
+  padding-top: 30px;
+  color: white;
+  font-size: 30px;
+  opacity: 0;
+}
+.menu-food article .link-food #icon:hover {
+  opacity: 1;
+}
+.menu-food article .link-food #icon .fa-check-circle {
+  margin-bottom: 20px;
+  margin-right: 40px;
+  position: relative;
+  right: 10px;
+  bottom: 5px;
 }
 
 .footers {
