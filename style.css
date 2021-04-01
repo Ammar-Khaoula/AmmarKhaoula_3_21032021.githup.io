@@ -8,9 +8,18 @@ header {
 }
 
 /* nav */
-.menu-food h1, nav #menu h2 {
+.menu-food h1, section #bolde, main h1, nav #menu h2 {
   font-family: "Roboto Slab", serif;
   font-size: 30px;
+}
+
+.menu-food .btn, nav #menu .btn {
+  border: 0px black solid;
+  border-radius: 20px;
+  padding: 15px 25px;
+  text-decoration: none;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  color: white;
 }
 
 nav {
@@ -25,14 +34,6 @@ nav #menu P {
   font-size: 20px;
   color: #4d4c4c;
   padding-bottom: 25px;
-}
-nav #menu a {
-  border: 0px black solid;
-  border-radius: 20px;
-  padding: 15px 25px;
-  text-decoration: none;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  color: white;
 }
 nav .menu1 {
   display: flex;
@@ -110,29 +111,52 @@ section .menu-resto {
   margin-top: 20px;
   margin-left: 20px;
 }
-section .menu-resto .fa-heart {
-  float: right;
-  position: relative;
-  bottom: 50px;
-  padding-right: 10px;
-  font-size: 30px;
-  transform: scale(1);
-  transition: transform 50ms, linear 100ms;
-}
-section .menu-resto .fa-heart:hover {
-  transform: scale(1.13);
-  color: #9356DC;
-}
-section .menu-resto .plats {
-  padding: 10px;
-  position: relative;
-  bottom: 80px;
-}
 section .menu-resto a {
   text-decoration: none;
   color: black;
 }
-section .menu-resto h3 {
+section .menu-resto a .bloc {
+  display: flex;
+}
+section .menu-resto a .bloc .coeur {
+  position: relative;
+  bottom: 50px;
+  left: 30px;
+  width: 25%;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 300ms ease;
+}
+section .menu-resto a .bloc .coeur .fas {
+  font-size: 35px;
+  opacity: 0;
+  position: relative;
+  right: 35px;
+}
+section .menu-resto a .bloc .coeur .fas:hover {
+  opacity: 1;
+  background: -webkit-linear-gradient(0deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide-top 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  animation-name: color-coeur;
+}
+@keyframes color-coeur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+section .menu-resto a .bloc .plats {
+  padding: 10px;
+  position: relative;
+  bottom: 95px;
+  width: 75%;
+}
+section .menu-resto a h3 {
   color: #0d8869;
   background-color: #99E2D0;
   border: 0px black solid;
@@ -145,10 +169,10 @@ section .menu-resto h3 {
   left: 100px;
   font-size: 20px;
 }
-section .menu-resto .sans-nouveau {
+section .menu-resto a .sans-nouveau {
   opacity: 0;
 }
-section .menu-resto img {
+section .menu-resto a img {
   width: 300px;
   height: 200px;
   border-top-left-radius: 15px;
@@ -162,6 +186,11 @@ section .menu-resto img {
   border-top-right-radius: 30px;
   position: relative;
   bottom: 60px;
+}
+.menu-food .btn {
+  margin-top: 30px;
+  margin-left: 110px;
+  margin-bottom: 30px;
 }
 .menu-food h1 {
   font-style: italic;
@@ -197,9 +226,14 @@ section .menu-resto img {
 }
 .menu-food article .link-food a span {
   transform: translate(0px, -5vh);
-  padding-right: 20px;
+  padding-right: 50px;
   float: right;
   font-weight: bolder;
+}
+
+.footers {
+  position: relative;
+  bottom: 60px;
 }
 
 /* footer */
