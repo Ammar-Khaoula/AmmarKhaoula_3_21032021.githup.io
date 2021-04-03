@@ -128,6 +128,9 @@ section .menu-resto a .bloc .coeur {
   background-color: transparent;
   transition: all 300ms ease;
 }
+section .menu-resto a .bloc .coeur:hover .far {
+  opacity: 0;
+}
 section .menu-resto a .bloc .coeur .fas {
   font-size: 35px;
   opacity: 0;
@@ -184,6 +187,14 @@ section .menu-resto a img {
   border: 0px black solid;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+}
+
+.retour {
+  color: black;
+  font-size: 20px;
+  position: relative;
+  left: 40px;
+  top: 30px;
 }
 
 .menu-food {
