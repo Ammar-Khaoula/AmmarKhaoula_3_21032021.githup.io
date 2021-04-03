@@ -54,7 +54,7 @@ nav .menu1 .fa-map-marker {
 }
 
 /* main */
-.menu-food article .link-food #icon, .menu-food article .link-food, section .menu-resto, main .link {
+.menu-food article .link-food .fas, .menu-food article .link-food, section .menu-resto, main .link {
   border: 0px black solid;
   border-radius: 15px;
   -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
@@ -216,43 +216,53 @@ section .menu-resto a img {
   margin-left: 5px;
   margin-right: 5px;
   padding-left: 10px;
+  padding-bottom: 10px;
   margin-bottom: 30px;
   background-color: white;
+  cursor: pointer;
+  animation-name: transition;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+.menu-food article .link-food:hover .fas {
+  opacity: 1;
+}
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(50%) rotate(0deg);
+  }
 }
 .menu-food article .link-food a {
   text-decoration: none;
   color: black;
 }
-.menu-food article .link-food a h2 {
-  font-size: 20px;
-}
-.menu-food article .link-food a p {
-  color: #272727;
-  font-size: 15px;
-}
 .menu-food article .link-food #prix {
-  margin-top: 35px;
+  position: relative;
+  left: 280px;
+  bottom: 20px;
   font-weight: bolder;
+  font-family: "Roboto Slab", serif;
 }
-.menu-food article .link-food #icon {
+.menu-food article .link-food h2 {
+  font-size: 15px;
+  font-family: "Roboto Slab", serif;
+}
+.menu-food article .link-food p {
+  font-size: 13px;
+}
+.menu-food article .link-food .fas {
   background-color: #99E2D0;
-  width: 40px;
-  height: 50px;
-  padding-left: 40px;
+  width: 60px;
+  height: 60px;
+  padding-left: 30px;
   padding-top: 30px;
   color: white;
   font-size: 30px;
   opacity: 0;
-}
-.menu-food article .link-food #icon:hover {
-  opacity: 1;
-}
-.menu-food article .link-food #icon .fa-check-circle {
-  margin-bottom: 20px;
-  margin-right: 40px;
-  position: relative;
-  right: 10px;
-  bottom: 5px;
 }
 
 .footers {
