@@ -105,20 +105,20 @@ section {
   padding-bottom: 35px;
 }
 section .menu-resto {
-  background-color: white;
+  background-color: #f5f1f1;
   width: 300px;
   height: 300px;
   margin-top: 20px;
   margin-left: 20px;
 }
-section .menu-resto a {
-  text-decoration: none;
-  color: black;
+section .menu-resto:hover {
+  background-color: whitesmoke;
+  box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.6);
 }
-section .menu-resto a .bloc {
+section .menu-resto .bloc {
   display: flex;
 }
-section .menu-resto a .bloc .coeur {
+section .menu-resto .bloc .coeur {
   position: relative;
   bottom: 50px;
   left: 30px;
@@ -128,21 +128,24 @@ section .menu-resto a .bloc .coeur {
   background-color: transparent;
   transition: all 300ms ease;
 }
-section .menu-resto a .bloc .coeur:hover .far {
-  opacity: 0;
+section .menu-resto .bloc .coeur:hover .far {
+  color: #FF79DA;
+  opacity: 0.5;
 }
-section .menu-resto a .bloc .coeur .fas {
+section .menu-resto .bloc .coeur .fas {
   font-size: 35px;
   opacity: 0;
   position: relative;
   right: 35px;
 }
-section .menu-resto a .bloc .coeur .fas:hover {
+section .menu-resto .bloc .coeur .fas:active {
   opacity: 1;
   background: -webkit-linear-gradient(0deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: slide-top 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  animation-fill-mode: forwards;
+  transform: translatez(-50%, 50%) rotate(90deg);
+  animation: slide-top 1s ease-in both;
   animation-name: color-coeur;
 }
 @keyframes color-coeur {
@@ -153,11 +156,15 @@ section .menu-resto a .bloc .coeur .fas:hover {
     opacity: 1;
   }
 }
-section .menu-resto a .bloc .plats {
+section .menu-resto .bloc .plats {
   padding: 10px;
   position: relative;
   bottom: 95px;
   width: 75%;
+}
+section .menu-resto a {
+  text-decoration: none;
+  color: black;
 }
 section .menu-resto a h3 {
   color: #0d8869;
@@ -180,6 +187,8 @@ section .menu-resto a img {
   height: 200px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  background-position: center;
+  background-size: cover;
 }
 
 /* manu-food */
@@ -232,11 +241,19 @@ section .menu-resto a img {
   background-color: white;
   cursor: pointer;
   animation-name: transition;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
+  animation-delay: 250ms;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.13, 0, 1, 0.24);
 }
 .menu-food article .link-food:hover .fas {
   opacity: 1;
+}
+.menu-food article .link-food:hover #prix {
+  position: absolute;
+  animation-delay: -5s;
+  transform: translateX(-25px) rotate(360deg);
 }
 @keyframes transition {
   0% {
@@ -244,7 +261,7 @@ section .menu-resto a img {
   }
   100% {
     opacity: 1;
-    transform: translatey(50%) rotate(0deg);
+    transform: translatey(-5%) rotate(0deg);
   }
 }
 .menu-food article .link-food a {
@@ -259,11 +276,17 @@ section .menu-resto a img {
   font-family: "Roboto Slab", serif;
 }
 .menu-food article .link-food h2 {
-  font-size: 15px;
+  font-size: 17px;
   font-family: "Roboto Slab", serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-food article .link-food p {
-  font-size: 13px;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-food article .link-food .fas {
   background-color: #99E2D0;
