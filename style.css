@@ -8,12 +8,12 @@ header {
 }
 
 /* nav */
-.menu-food h1, section #bolde, main h1, nav #menu h2 {
+.menu-food h2, section #bolde, main h1, nav #menu h2 {
   font-family: "Roboto Slab", serif;
   font-size: 30px;
 }
 
-.menu-food .btn, nav #menu .btn {
+.menu-food .btn button, nav #menu .btn {
   border: 0px black solid;
   border-radius: 20px;
   padding: 15px 25px;
@@ -213,6 +213,11 @@ section .menu-resto a img {
   border-top-right-radius: 30px;
 }
 
+nav img {
+  width: 350px;
+  height: 250px;
+}
+
 .retour {
   color: black;
   font-size: 20px;
@@ -226,11 +231,9 @@ section .menu-resto a img {
   bottom: 60px;
 }
 .menu-food .btn {
-  margin-top: 30px;
-  margin-left: 110px;
-  margin-bottom: 30px;
+  text-align: center;
 }
-.menu-food h1 {
+.menu-food h2 {
   font-style: italic;
   padding-top: 20px;
 }
@@ -243,13 +246,23 @@ section .menu-resto a img {
   color: #302f2f;
   border-bottom: 4px #99E2D0 solid;
   width: 55px;
+  margin-left: 20px;
+}
+.menu-food article .link-food:nth-child(1) {
+  animation-duration: 0.5s;
+}
+.menu-food article .link-food:nth-child(2) {
+  animation-duration: 0.75s;
+}
+.menu-food article .link-food:nth-child(3) {
+  animation-duration: 1s;
 }
 .menu-food article .link-food {
   display: flex;
   justify-content: space-between;
   height: 80px;
-  margin-left: 5px;
-  margin-right: 5px;
+  width: 500px;
+  margin-left: 100px;
   padding-left: 10px;
   padding-bottom: 10px;
   margin-bottom: 30px;
@@ -262,13 +275,31 @@ section .menu-resto a img {
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.13, 0, 1, 0.24);
 }
-.menu-food article .link-food:hover .fas {
-  opacity: 1;
+@media all and (max-width: 768px) {
+  .menu-food article .link-food {
+    width: auto;
+    margin: 30px 5px;
+  }
 }
-.menu-food article .link-food:hover #prix {
+.menu-food article .link-food:hover .fas {
+  opacity: 0.3;
+}
+.menu-food article .link-food:hover span {
   position: absolute;
   animation-delay: -5s;
-  transform: translateX(-25px) rotate(360deg);
+  transform: translateX(-65px) rotate(360deg);
+}
+.menu-food article .link-food:hover p {
+  width: 180px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu-food article .link-food:hover h2 {
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @keyframes transition {
   0% {
@@ -283,25 +314,21 @@ section .menu-resto a img {
   text-decoration: none;
   color: black;
 }
-.menu-food article .link-food #prix {
+.menu-food article .link-food span {
   position: relative;
   left: 280px;
-  bottom: 20px;
+  bottom: 30px;
   font-weight: bolder;
   font-family: "Roboto Slab", serif;
 }
 .menu-food article .link-food h2 {
-  font-size: 17px;
+  font-size: 13px;
   font-family: "Roboto Slab", serif;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: visible;
 }
 .menu-food article .link-food p {
-  font-size: 15px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  font-size: 13px;
+  overflow: visible;
 }
 .menu-food article .link-food .fas {
   background-color: #99E2D0;
@@ -312,6 +339,9 @@ section .menu-resto a img {
   color: white;
   font-size: 30px;
   opacity: 0;
+}
+.menu-food article .link-food .fas:active {
+  opacity: 1;
 }
 
 .footers {
