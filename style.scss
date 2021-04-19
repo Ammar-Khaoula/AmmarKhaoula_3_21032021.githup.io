@@ -15,15 +15,12 @@ header{
 } 
               /* nav */
 %family{
-    font-family: 'Roboto Slab', serif;
-    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
 }
 %button{
-    border: 0px black solid;
-    border-radius: 20px;
     padding:15px 25px;
     text-decoration: none;
-    background:linear-gradient(to bottom, $secondColor, $primaryColor);
+    background:linear-gradient(to bottom, $secondColor, $primaryColor,);
     color: white;
 }
 nav{
@@ -42,6 +39,12 @@ nav{
         }
         .btn{
             @extend %button;
+            @extend %border;
+            border-radius: 25px;
+            &:hover{
+                opacity: 0.8;
+                box-shadow: 7px 4px 15px 0px rgba(0, 0, 0, 0.8);
+            }
         }
     }
     
@@ -66,11 +69,11 @@ nav{
                /* main */
 %border{
     border: 0px black solid;
-    border-radius: 15px;
     -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
     -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
     box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
 }
+
 main{ 
             h1{
                 @extend %family;
@@ -84,9 +87,11 @@ main{
            .link{
                display: flex;
                @extend %border;
+               border-radius: 15px;
                margin: 20px ;
                padding:auto, 5px;
                height: 70px;
+               background-color: rgb(247, 245, 245);
 
                .fas{
                    color: grey;
@@ -137,14 +142,11 @@ section{
    }
    .menu-resto{
        @extend %border;
-       background-color: rgb(245, 241, 241);
+       border-radius: 15px;
+       background-color: rgb(252, 249, 249);
        width: 300px;
        height: 300px;
        margin: 20px auto;
-       &:hover{
-           background-color:whitesmoke;
-           box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.6);
-       }
        .bloc{
         display: flex;             
            .coeur{  
@@ -171,11 +173,10 @@ section{
                   opacity: 1;
                   background:-webkit-linear-gradient(0deg,$secondColor,$primaryColor);
                   -webkit-background-clip: text;
-                  -webkit-text-fill-color:transparent;
-                  animation-fill-mode: forwards;
+                  -webkit-text-fill-color:transparent; 
                   transform: translatez(-50%,50%) rotate(90deg);
-                  animation: slide-top 1s ease-in both;
-                  animation-name: color-coeur;
+                  animation: slide-top 1s ease-in;
+                  animation-name: color-coeur 1s forwards;
                   @keyframes color-coeur {
                       0%{
                           opacity: 0;
@@ -254,14 +255,15 @@ nav{
        text-align: center;
        button{
          @extend %button;
+         @extend %border;
+         border-radius: 25px;
+            &:hover{
+                opacity: 0.8;
+                box-shadow: 7px 4px 15px 0px rgba(0, 0, 0, 0.8);
+            }
        }
     }
-    h2{
-        @extend%family;
-        font-style: italic;
-        padding-top: 20px;
-        
-     }
+    
      .fa-heart{
          font-size: 25px;
          transform: translate(300px,-8vh);
@@ -288,11 +290,11 @@ nav{
              display: flex;
              justify-content: space-between;
             @extend%border;
+            border-radius: 15px;
             height: 80px;
             width: 500px;
             margin-left: 100px;
             padding-left:10px;
-            padding-bottom: 10px;
             margin-bottom: 30px;
             background-color: white;
             cursor: pointer;
@@ -309,7 +311,7 @@ nav{
             
             &:hover{
                 & .fas{
-                    opacity: 0.3;
+                    opacity: 0.1;
                 }
                 & span{
                     position: absolute;
@@ -355,8 +357,8 @@ nav{
                 font-family: 'Roboto Slab', serif;
             }
              h2{
-                font-size: 13px;
-                font-family: 'Roboto Slab', serif;  
+                font-size: 17px;
+                @extend %family; 
                 overflow: visible;
             }
             p{
@@ -374,14 +376,21 @@ nav{
                 color: white;
                 font-size: 30px;
                 opacity: 0;
+                
+          
                &:active{
                    opacity: 1;
+                   animation-fill-mode: both;
+                   animation-delay: 1s;
+                   animation-duration: 1s;
+                   
                }
             }
            
          }
      }
 }
+
 
 .footers{
     position: relative;

@@ -8,14 +8,11 @@ header {
 }
 
 /* nav */
-.menu-food h2, section #bolde, main h1, nav #menu h2 {
-  font-family: "Roboto Slab", serif;
-  font-size: 30px;
+.menu-food article .link-food h2, section #bolde, main h1, nav #menu h2 {
+  font-family: "Roboto", sans-serif;
 }
 
 .menu-food .btn button, nav #menu .btn {
-  border: 0px black solid;
-  border-radius: 20px;
   padding: 15px 25px;
   text-decoration: none;
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
@@ -34,6 +31,13 @@ nav #menu P {
   font-size: 20px;
   color: #4d4c4c;
   padding-bottom: 25px;
+}
+nav #menu .btn {
+  border-radius: 25px;
+}
+nav #menu .btn:hover {
+  opacity: 0.8;
+  box-shadow: 7px 4px 15px 0px rgba(0, 0, 0, 0.8);
 }
 nav .menu1 {
   display: flex;
@@ -54,9 +58,8 @@ nav .menu1 .fa-map-marker {
 }
 
 /* main */
-.menu-food article .link-food .fas, .menu-food article .link-food, section .menu-resto, main .link {
+.menu-food article .link-food .fas, .menu-food article .link-food, .menu-food .btn button, section .menu-resto, main .link, nav #menu .btn {
   border: 0px black solid;
-  border-radius: 15px;
   -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
   -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
   box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
@@ -72,9 +75,11 @@ main .links {
 }
 main .link {
   display: flex;
+  border-radius: 15px;
   margin: 20px;
   padding: auto, 5px;
   height: 70px;
+  background-color: #f7f5f5;
 }
 main .link .fas {
   color: grey;
@@ -121,14 +126,11 @@ section .article {
   flex-wrap: wrap;
 }
 section .menu-resto {
-  background-color: #f5f1f1;
+  border-radius: 15px;
+  background-color: #fcf9f9;
   width: 300px;
   height: 300px;
   margin: 20px auto;
-}
-section .menu-resto:hover {
-  background-color: whitesmoke;
-  box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.6);
 }
 section .menu-resto .bloc {
   display: flex;
@@ -158,10 +160,9 @@ section .menu-resto .bloc .coeur .fas:active {
   background: -webkit-linear-gradient(0deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-fill-mode: forwards;
   transform: translatez(-50%, 50%) rotate(90deg);
-  animation: slide-top 1s ease-in both;
-  animation-name: color-coeur;
+  animation: slide-top 1s ease-in;
+  animation-name: color-coeur 1s forwards;
 }
 @keyframes color-coeur {
   0% {
@@ -233,9 +234,12 @@ nav img {
 .menu-food .btn {
   text-align: center;
 }
-.menu-food h2 {
-  font-style: italic;
-  padding-top: 20px;
+.menu-food .btn button {
+  border-radius: 25px;
+}
+.menu-food .btn button:hover {
+  opacity: 0.8;
+  box-shadow: 7px 4px 15px 0px rgba(0, 0, 0, 0.8);
 }
 .menu-food .fa-heart {
   font-size: 25px;
@@ -260,11 +264,11 @@ nav img {
 .menu-food article .link-food {
   display: flex;
   justify-content: space-between;
+  border-radius: 15px;
   height: 80px;
   width: 500px;
   margin-left: 100px;
   padding-left: 10px;
-  padding-bottom: 10px;
   margin-bottom: 30px;
   background-color: white;
   cursor: pointer;
@@ -282,7 +286,7 @@ nav img {
   }
 }
 .menu-food article .link-food:hover .fas {
-  opacity: 0.3;
+  opacity: 0.1;
 }
 .menu-food article .link-food:hover span {
   position: absolute;
@@ -322,8 +326,7 @@ nav img {
   font-family: "Roboto Slab", serif;
 }
 .menu-food article .link-food h2 {
-  font-size: 13px;
-  font-family: "Roboto Slab", serif;
+  font-size: 17px;
   overflow: visible;
 }
 .menu-food article .link-food p {
@@ -342,6 +345,9 @@ nav img {
 }
 .menu-food article .link-food .fas:active {
   opacity: 1;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  animation-duration: 1s;
 }
 
 .footers {
