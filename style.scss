@@ -77,6 +77,8 @@ nav{
 main{ 
             h1{
                 @extend %family;
+                font-size: 30px;
+                font-weight: bolder;
                 padding-left: 10px;
             }
             .links{
@@ -128,12 +130,44 @@ main{
     
 
 }
-          /* Section */
+          /* Section1 */
+#spinner{
+    height:50vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+      circle{
+            fill: none;
+            stroke: $secondColor;
+            stroke-width:10px ;
+            stroke-dasharray:100 100;
+            stroke-dashoffset: 70;
+            animation: rotation 2000ms ease-in-out alternate infinite;
+        }
+    
+    @keyframes rotation{
+        0%{
+            stroke-dasharray: 100 100;
+            stroke-dashoffset: 70;
+            stroke: $secondColor;
+        }
+        100%{
+            stroke-dasharray:20 20;
+            stroke-dashoffset:-600;
+            stroke: $primaryColor;
+        }
+    }
+    
+}
+          /* Section2 */
 section{
    background-color: rgb(246, 248, 248);
    padding-bottom: 35px;
    #bolde{
        @extend %family;
+       font-weight: bolder;
+       font-size: 30p;
        padding: 10px;
    }
    .article{
@@ -251,6 +285,10 @@ nav{
     @extend%radius; 
     position: relative;
     bottom: 60px; 
+    h1{
+        font-family: 'Shrikhand', cursive;
+        padding: 20px;
+    }
     .btn{
        text-align: center;
        button{
@@ -266,7 +304,7 @@ nav{
     
      .fa-heart{
          font-size: 25px;
-         transform: translate(300px,-8vh);
+         transform: translate(290px,-10vh);
      }
      article{
          h3{
@@ -357,7 +395,7 @@ nav{
                 font-family: 'Roboto Slab', serif;
             }
              h2{
-                font-size: 17px;
+                font-size: 15px;
                 @extend %family; 
                 overflow: visible;
             }
@@ -405,8 +443,7 @@ footer{
     padding-top: 15px;
     padding-bottom: 30px;
   h1{
-    font-family: 'Roboto Slab', serif;
-    font-style: italic;
+    font-family: 'Shrikhand', cursive;
     padding-left: 25px;
   }
   li{

@@ -66,6 +66,8 @@ nav .menu1 .fa-map-marker {
 }
 
 main h1 {
+  font-size: 30px;
+  font-weight: bolder;
   padding-left: 10px;
 }
 main .links {
@@ -113,12 +115,43 @@ main a {
   padding-right: 10px;
 }
 
-/* Section */
+/* Section1 */
+#spinner {
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#spinner circle {
+  fill: none;
+  stroke: #FF79DA;
+  stroke-width: 10px;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 70;
+  animation: rotation 2000ms ease-in-out alternate infinite;
+}
+@keyframes rotation {
+  0% {
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 70;
+    stroke: #FF79DA;
+  }
+  100% {
+    stroke-dasharray: 20 20;
+    stroke-dashoffset: -600;
+    stroke: #9356DC;
+  }
+}
+
+/* Section2 */
 section {
   background-color: #f6f8f8;
   padding-bottom: 35px;
 }
 section #bolde {
+  font-weight: bolder;
+  font-size: 30p;
   padding: 10px;
 }
 section .article {
@@ -231,6 +264,10 @@ nav img {
   position: relative;
   bottom: 60px;
 }
+.menu-food h1 {
+  font-family: "Shrikhand", cursive;
+  padding: 20px;
+}
 .menu-food .btn {
   text-align: center;
 }
@@ -243,7 +280,7 @@ nav img {
 }
 .menu-food .fa-heart {
   font-size: 25px;
-  transform: translate(300px, -8vh);
+  transform: translate(290px, -10vh);
 }
 .menu-food article h3 {
   text-transform: uppercase;
@@ -326,7 +363,7 @@ nav img {
   font-family: "Roboto Slab", serif;
 }
 .menu-food article .link-food h2 {
-  font-size: 17px;
+  font-size: 15px;
   overflow: visible;
 }
 .menu-food article .link-food p {
@@ -363,8 +400,7 @@ footer {
   padding-bottom: 30px;
 }
 footer h1 {
-  font-family: "Roboto Slab", serif;
-  font-style: italic;
+  font-family: "Shrikhand", cursive;
   padding-left: 25px;
 }
 footer li {
