@@ -1,13 +1,4 @@
-header {
-  text-align: center;
-}
-@media all and (max-width: 768px) {
-  header img {
-    width: 150px;
-  }
-}
-
-/* nav */
+@charset "UTF-8";
 .menu-food article .link-food p, .menu-food article .link-food h2, .menu-food article .link-food span, section #bolde, main h1, nav #menu h2 {
   font-family: "Roboto", sans-serif;
 }
@@ -19,6 +10,30 @@ header {
   color: white;
 }
 
+.menu-food article .link-food .fas, .menu-food article .link-food, .menu-food .btn button, section .menu-resto, main .link, nav #menu .btn {
+  border: 0px black solid;
+  -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+}
+
+.menu-food {
+  border: 0px black solid;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+/* entete(logo de site) */
+header {
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  header img {
+    width: 150px;
+  }
+}
+
+/* nav( la localisation des restaurant) */
 nav {
   text-align: center;
   padding-top: 10px;
@@ -26,6 +41,7 @@ nav {
 nav #menu {
   background-color: #f3f3f2;
   padding-bottom: 40px;
+  /* animation de bouton */
 }
 nav #menu P {
   font-size: 20px;
@@ -42,10 +58,7 @@ nav #menu .btn:hover {
 nav .menu1 {
   display: flex;
   justify-content: center;
-  border: 0px black solid;
-  -webkit-box-shadow: 4px -2px 9px 0px rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 4px -2px 9px 0px rgba(0, 0, 0, 0.33);
-  box-shadow: 4px -2px 9px 0px rgba(0, 0, 0, 0.33);
+  border-top: 3px #c9c7c7 solid;
   background-color: #e7e7e7;
 }
 nav .menu1 .fa-map-marker {
@@ -57,14 +70,7 @@ nav .menu1 .fa-map-marker {
   }
 }
 
-/* main */
-.menu-food article .link-food .fas, .menu-food article .link-food, .menu-food .btn button, section .menu-resto, main .link, nav #menu .btn {
-  border: 0px black solid;
-  -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
-  -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
-  box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
-}
-
+/* main (3 fonctionnement)*/
 main h1 {
   font-size: 30px;
   font-weight: bolder;
@@ -82,6 +88,9 @@ main .link {
   padding: auto, 5px;
   height: 70px;
   background-color: #f7f5f5;
+}
+main .link:hover {
+  background-color: rgba(147, 86, 220, 0.2);
 }
 main .link .fas {
   color: grey;
@@ -106,23 +115,21 @@ main .link span {
   color: white;
   font-weight: bolder;
 }
-main .link:hover {
-  background-color: rgba(147, 86, 220, 0.2);
-}
 main a {
   text-decoration: none;
   color: black;
   padding-right: 10px;
 }
 
-/* Section1 */
+/* Section1 (4 menu au page d'acceuil)*/
 section {
   background-color: #f6f8f8;
   padding-bottom: 35px;
+  /* pour le responsive de site  */
 }
 section #bolde {
   font-weight: bolder;
-  font-size: 30p;
+  font-size: 30px;
   padding: 10px;
 }
 section .article {
@@ -135,9 +142,11 @@ section .menu-resto {
   width: 300px;
   height: 300px;
   margin: 20px auto;
+  /* pour le bouton nouveau */
 }
 section .menu-resto .bloc {
   display: flex;
+  /* animation de coeur */
 }
 section .menu-resto .bloc .coeur {
   position: relative;
@@ -185,6 +194,7 @@ section .menu-resto .bloc .plats {
 section .menu-resto a {
   text-decoration: none;
   color: black;
+  /* image de menu */
 }
 section .menu-resto a h3 {
   color: #0d8869;
@@ -218,6 +228,10 @@ section .menu-resto a img {
   justify-content: center;
   align-items: center;
 }
+#spinner h2 {
+  opacity: 0;
+  font-size: 10px;
+}
 #spinner circle {
   fill: none;
   stroke: #FF79DA;
@@ -244,17 +258,12 @@ section .menu-resto a img {
 }
 
 /* manu-food */
-.menu-food {
-  border: 0px black solid;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-
 nav img {
   width: 350px;
   height: 250px;
 }
 
+/* fleche de retour à la page d'acceuil */
 .retour {
   color: black;
   font-size: 20px;
@@ -266,8 +275,9 @@ nav img {
 .menu-food {
   position: relative;
   bottom: 60px;
+  /* animation de boutton de commander */
 }
-.menu-food h1 {
+.menu-food #titre {
   font-family: "Shrikhand", cursive;
   padding: 20px;
 }
@@ -292,15 +302,6 @@ nav img {
   width: 55px;
   margin-left: 20px;
 }
-.menu-food article .link-food:nth-child(1) {
-  animation-duration: 0.5s;
-}
-.menu-food article .link-food:nth-child(2) {
-  animation-duration: 0.75s;
-}
-.menu-food article .link-food:nth-child(3) {
-  animation-duration: 1s;
-}
 .menu-food article .link-food {
   display: flex;
   justify-content: space-between;
@@ -313,8 +314,27 @@ nav img {
   background-color: white;
   cursor: pointer;
   animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation: transition 250ms cubic-bezier(0.13, 0, 1, 0.24) alternate;
+  animation: transition 250ms cubic-bezier(0.13, 0, 1, 0.24) alternate forwards;
+  /* animation d'apparaître progressivement */
+  /* animation d'apparaître une petite coche à la clic du plat */
+}
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(-5%);
+  }
+}
+.menu-food article .link-food:nth-child(1) {
+  animation-duration: 0.5s;
+}
+.menu-food article .link-food:nth-child(2) {
+  animation-duration: 0.75s;
+}
+.menu-food article .link-food:nth-child(3) {
+  animation-duration: 1s;
 }
 .menu-food article .link-food .menus {
   position: relative;
@@ -325,13 +345,17 @@ nav img {
     margin: 30px 5px;
   }
 }
+.menu-food article .link-food:hover {
+  /* décalage de prix au survole  */
+  /* animation de ... au survole si la phrase est longue */
+}
 .menu-food article .link-food:hover .fas {
   opacity: 0.1;
 }
 .menu-food article .link-food:hover span {
   position: absolute;
   animation-delay: -5s;
-  transform: translateX(-50px) translateY(15px);
+  transform: translateX(-40px) translateY(15px);
 }
 .menu-food article .link-food:hover p {
   width: 180px;
@@ -344,15 +368,6 @@ nav img {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-@keyframes transition {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translatey(-5%) rotate(0deg);
-  }
 }
 .menu-food article .link-food a {
   text-decoration: none;
@@ -379,8 +394,9 @@ nav img {
   background-color: #99E2D0;
   width: 35px;
   height: 40px;
-  padding-left: 30px;
+  padding-left: 20px;
   padding-top: 30px;
+  font-size: 20px;
   color: white;
   opacity: 0;
 }
@@ -391,26 +407,17 @@ nav img {
   animation-duration: 1s;
 }
 
+/* footer */
 .footers {
   position: relative;
   bottom: 60px;
 }
 
-/* footer */
 footer {
   background-color: black;
   color: white;
   padding-top: 15px;
   padding-bottom: 30px;
-  animation: translate 10s ease-in-out both;
-}
-@keyframes translate {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-180px);
-  }
 }
 footer h1 {
   font-family: "Shrikhand", cursive;

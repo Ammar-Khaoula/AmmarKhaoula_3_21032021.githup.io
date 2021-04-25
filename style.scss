@@ -2,18 +2,6 @@ $primaryColor:#9356DC;
 $opacityprimo:rgba(147,86,220,0.2);
 $secondColor:#FF79DA;
 $tertiaireColor:#99E2D0;
-
-header{
-    
-    text-align: center;
-    @media all and (max-width:768px){
-        img{
-            width: 150px;
-           
-        }
-    }  
-} 
-              /* nav */
 %family{
     font-family: 'Roboto', sans-serif;
 }
@@ -23,6 +11,27 @@ header{
     background:linear-gradient(to bottom, $secondColor, $primaryColor,);
     color: white;
 }
+%border{
+    border: 0px black solid;
+    -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+    box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
+}
+%radius{
+    border: 0px black solid;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+             /* entete(logo de site) */
+header{
+    text-align: center;
+    @media all and (max-width:768px){
+        img{
+            width: 150px;   
+        }
+    }  
+} 
+              /* nav( la localisation des restaurant) */
 nav{
     text-align: center;
     padding-top: 10px;
@@ -37,6 +46,7 @@ nav{
             color: rgb(77, 76, 76);
             padding-bottom: 25px;
         }
+                /* animation de bouton */
         .btn{
             @extend %button;
             @extend %border;
@@ -47,14 +57,10 @@ nav{
             }
         }
     }
-    
     .menu1{
         display: flex;
         justify-content:center;
-        border: 0px black solid;
-        -webkit-box-shadow: 4px -2px 9px 0px rgba(0, 0, 0, 0.33);
-        -moz-box-shadow: 4px -2px 9px 0px rgba(0, 0, 0, 0.33);
-        box-shadow: 4px -2px 9px 0px rgba(0, 0, 0, 0.33);
+        border-top: 3px rgb(201, 199, 199) solid;
         background-color: rgb(231, 231, 231);
         .fa-map-marker{
             padding: 20px;
@@ -66,14 +72,7 @@ nav{
         }  
     }
 }
-               /* main */
-%border{
-    border: 0px black solid;
-    -webkit-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
-    -moz-box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
-    box-shadow: 6px 4px 15px 0px rgba(0, 0, 0, 0.38);
-}
-
+               /* main (3 fonctionnement)*/
 main{ 
             h1{
                 @extend %family;
@@ -94,7 +93,9 @@ main{
                padding:auto, 5px;
                height: 70px;
                background-color: rgb(247, 245, 245);
-
+               &:hover{
+                background-color: $opacityprimo;                  
+           }
                .fas{
                    color: grey;
                    font-size: 20px;
@@ -117,9 +118,6 @@ main{
                    background-color: $primaryColor;
                    color: white;
                    font-weight: bolder;
-               }
-               &:hover{
-                    background-color: $opacityprimo;                  
                }      
            }
         a{
@@ -127,19 +125,18 @@ main{
             color: black;
             padding-right: 10px;    
         }
-    
-
 }
-          /* Section1 */
+          /* Section1 (4 menu au page d'acceuil)*/
 section{
    background-color: rgb(246, 248, 248);
    padding-bottom: 35px;
    #bolde{
        @extend %family;
        font-weight: bolder;
-       font-size: 30p;
+       font-size: 30px;
        padding: 10px;
    }
+   /* pour le responsive de site  */
    .article{
        display: flex;
        flex-wrap: wrap;
@@ -152,7 +149,8 @@ section{
        height: 300px;
        margin: 20px auto;
        .bloc{
-        display: flex;             
+        display: flex;  
+             /* animation de coeur */           
            .coeur{  
              position: relative;
              bottom: 50px;
@@ -194,13 +192,14 @@ section{
           }
           
       }
-       .plats{
-              padding: 10px;
-              position: relative;
-              bottom: 95px;
-              width: 75%;
-               }
-      }
+    .plats{
+        padding: 10px;
+        position: relative;
+        bottom: 95px;
+        width: 75%;
+    }
+}
+    /* pour le bouton nouveau */
     a{
        text-decoration: none;
        color: black;
@@ -220,64 +219,61 @@ section{
       .sans-nouveau{
         opacity: 0;
      }
-     img{
-     width:300px ;
-     height: 200px;
-     border-top-left-radius: 15px;
-     border-top-right-radius: 15px;
-     background-position: center;  
-     background-size: cover;  
+     /* image de menu */
+       img{
+          width:300px ;
+          height: 200px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+           background-position: center;  
+           background-size: cover;  
+       }
     }
-   }
-}      
+ }      
 }
          /* Section2  (spineer)*/
-         #spinner{
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-           
-              circle{
-                    fill: none;
-                    stroke: $secondColor;
-                    stroke-width:10px ;
-                    stroke-dasharray:100 100;
-                    stroke-dashoffset: 70;
-                    opacity: 0;
-                    animation-duration: 3s;
-                    animation: rotation 2000ms ease-in-out alternate;
-                }
-            
-            @keyframes rotation{
-                0%{
-                    stroke-dasharray: 100 100;
-                    stroke-dashoffset: 70;
-                    stroke: $secondColor;
-                    opacity: 1;
-                }
-                100%{
-                    stroke-dasharray:20 20;
-                    stroke-dashoffset:-600;
-                    stroke: $primaryColor;
-                    opacity: 1;
-                }
-            }
-            
+#spinner{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+        h2{
+            opacity: 0;
+            font-size: 10px;
         }
-
-          /* manu-food */
-%radius{
-    border: 0px black solid;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+        circle{
+            fill: none;
+            stroke: $secondColor;
+            stroke-width:10px ;
+            stroke-dasharray:100 100;
+            stroke-dashoffset: 70;
+            opacity: 0;
+            animation-duration: 3s;
+            animation: rotation 2000ms ease-in-out alternate;
+        }  
+        @keyframes rotation{
+            0%{
+                stroke-dasharray: 100 100;
+                stroke-dashoffset: 70;
+                stroke: $secondColor;
+                opacity: 1;
+            }
+            100%{
+                stroke-dasharray:20 20;
+                stroke-dashoffset:-600;
+                stroke: $primaryColor;
+                opacity: 1;
+            }
+        }          
 }
+          /* manu-food */
 nav{
     img{
         width: 350px;
         height: 250px;
     }
 }
+/* fleche de retour à la page d'acceuil */
 .retour{
     color: black;
     font-size: 20px;
@@ -289,10 +285,11 @@ nav{
     @extend%radius; 
     position: relative;
     bottom: 60px; 
-    h1{
+    #titre{
         font-family: 'Shrikhand', cursive;
         padding: 20px;
     }
+    /* animation de boutton de commander */
     .btn{
        text-align: center;
        button{
@@ -305,7 +302,6 @@ nav{
             }
        }
     }
-    
      .fa-heart{
          font-size: 25px;
          transform: translate(290px,-10vh);
@@ -316,18 +312,9 @@ nav{
              color:rgb(48, 47, 47);
              border-bottom:4px $tertiaireColor solid;
              width: 55px;
-             margin-left: 20px;
-             
+             margin-left: 20px;     
          }
-         .link-food:nth-child(1){
-            animation-duration: .5s;
-        }
-         .link-food:nth-child(2){
-             animation-duration: .75s;
-         }
-         .link-food:nth-child(3){
-            animation-duration: 1s;
-        }
+       
          .link-food{
             display: flex;
             justify-content: space-between;
@@ -341,8 +328,26 @@ nav{
             background-color: white;
             cursor: pointer;
             animation-duration: 2s;
-            animation-fill-mode: forwards;
-            animation: transition 250ms cubic-bezier(.13,0,1,.24) alternate;
+            animation: transition 250ms cubic-bezier(.13,0,1,.24) alternate forwards;
+           /* animation d'apparaître progressivement */
+        @keyframes transition {
+                0%{
+                  opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                    transform: translatey(-5%);
+                }
+        }
+            &:nth-child(1){
+                animation-duration: .5s;
+            }
+             &:nth-child(2){
+                 animation-duration: .75s;
+             }
+             &:nth-child(3){
+                animation-duration: 1s;
+            }
             .menus{
                 position: relative;   
             }
@@ -350,16 +355,17 @@ nav{
                 width: auto;
                 margin: 30px 5px;
             }
-            
             &:hover{
                 & .fas{
                     opacity: 0.1;
                 }
+                /* décalage de prix au survole  */
                 & span{
                     position: absolute;
                     animation-delay: -5s;
-                    transform: translateX(-50px) translateY(15px) ;
+                    transform: translateX(-40px) translateY(15px) ;
                 }
+                /* animation de ... au survole si la phrase est longue */
                 & p{
                         width: 180px;
                         text-overflow: ellipsis;
@@ -373,16 +379,7 @@ nav{
                     overflow: hidden    
             }
                 
-            }
-                @keyframes transition {
-                    0%{
-                      opacity: 0;
-                    }
-                    100%{
-                        opacity: 1;
-                        transform: translatey(-5%) rotate(0deg) ;
-                    }
-                }
+            }     
             a{
                 text-decoration: none;
                 color: black;       
@@ -405,6 +402,7 @@ nav{
                 @extend %family;
                 opacity: 0.7;   
             }
+            /* animation d'apparaître une petite coche à la clic du plat */
             .fas{
                 @extend%border;
                 border-top-right-radius: 15px;
@@ -412,8 +410,9 @@ nav{
                 background-color:$tertiaireColor;
                 width: 35px;
                 height: 40px;
-                padding-left: 30px;
+                padding-left: 20px;
                 padding-top: 30px;
+                font-size: 20px;
                 color: white;
                 opacity: 0;
                &:active{
@@ -426,25 +425,16 @@ nav{
          }
      }
 }
-
-
+    /* footer */
 .footers{
     position: relative;
     bottom: 60px;
 }
-
-
-    /* footer */
 footer{
     background-color: black;
     color: white;
     padding-top: 15px;
     padding-bottom: 30px;
-    animation: translate 10s ease-in-out both; 
-    @keyframes translate {
-        from{ transform: translateY(0px);}
-        to{transform: translateY(-180px);}    
-    } 
   h1{
     font-family: 'Shrikhand', cursive;
     padding-left: 25px;
