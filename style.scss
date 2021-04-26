@@ -43,6 +43,7 @@ nav{
         }
         P{
             font-size: 20px;
+            @extend%family;
             color: rgb(77, 76, 76);
             padding-bottom: 25px;
         }
