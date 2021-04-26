@@ -176,7 +176,7 @@ section .menu-resto .bloc .coeur .fas:active {
   background: -webkit-linear-gradient(0deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-name: couleur 100ms ease-in both;
+  animation: couleur 100ms ease-in both;
 }
 @keyframes couleur {
   0% {
