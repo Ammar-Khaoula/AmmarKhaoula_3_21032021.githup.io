@@ -88,8 +88,8 @@ main{
            .link{
                display: flex;
                @extend %border;
-               border-radius: 15px;
-               margin: 20px;
+               border-radius: 20px;
+               margin: 13px;
                padding-right:5px;
                padding-left: 5px;
                height: 70px;
@@ -102,6 +102,8 @@ main{
                    font-size: 20px;
                    padding-top:20px;
                    padding-right: 10px;
+                   position: relative;
+                   right: 13px;
                    &:hover{
                        color: $primaryColor;
                    }
@@ -124,6 +126,7 @@ main{
         a{
             text-decoration: none;
             color: black;
+            @extend %family;
             padding-right: 5px;    
         }
 }
@@ -147,14 +150,14 @@ section{
        border-radius: 15px;
        background-color: rgb(252, 249, 249);
        width: 300px;
-       height: 300px;
+       height: 280px;
        margin: 20px auto;
        .bloc{
         display: flex;  
              /* animation de coeur */           
            .coeur{  
              position: relative;
-             bottom: 50px;
+             bottom: 60px;
              left: 30px;
              width: 25%;
              font-size: 25px;
@@ -194,6 +197,16 @@ section{
         position: relative;
         bottom: 95px;
         width: 75%;
+        span{
+            color: rgb(70, 69, 69);
+            position: relative;
+            bottom: 15px;
+            font-size: 20px;
+        }
+        h2{
+            @extend %family;
+            text-transform: capitalize;
+        }
     }
 }
     /* pour le bouton nouveau */

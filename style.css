@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.menu-food article .link-food p, .menu-food article .link-food h2, .menu-food article .link-food span, section #bolde, main h1, nav #menu h2 {
+.menu-food article .link-food p, .menu-food article .link-food h2, .menu-food article .link-food span, section .menu-resto .bloc .plats h2, section #bolde, main a, main h1, nav #menu h2 {
   font-family: "Roboto", sans-serif;
 }
 
@@ -83,8 +83,8 @@ main .links {
 }
 main .link {
   display: flex;
-  border-radius: 15px;
-  margin: 20px;
+  border-radius: 20px;
+  margin: 13px;
   padding-right: 5px;
   padding-left: 5px;
   height: 70px;
@@ -98,6 +98,8 @@ main .link .fas {
   font-size: 20px;
   padding-top: 20px;
   padding-right: 10px;
+  position: relative;
+  right: 13px;
 }
 main .link .fas:hover {
   color: #9356DC;
@@ -141,7 +143,7 @@ section .menu-resto {
   border-radius: 15px;
   background-color: #fcf9f9;
   width: 300px;
-  height: 300px;
+  height: 280px;
   margin: 20px auto;
   /* pour le bouton nouveau */
 }
@@ -151,7 +153,7 @@ section .menu-resto .bloc {
 }
 section .menu-resto .bloc .coeur {
   position: relative;
-  bottom: 50px;
+  bottom: 60px;
   left: 30px;
   width: 25%;
   font-size: 25px;
@@ -189,6 +191,15 @@ section .menu-resto .bloc .plats {
   position: relative;
   bottom: 95px;
   width: 75%;
+}
+section .menu-resto .bloc .plats span {
+  color: #464545;
+  position: relative;
+  bottom: 15px;
+  font-size: 20px;
+}
+section .menu-resto .bloc .plats h2 {
+  text-transform: capitalize;
 }
 section .menu-resto a {
   text-decoration: none;
