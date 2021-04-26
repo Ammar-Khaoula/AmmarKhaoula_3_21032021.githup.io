@@ -180,8 +180,8 @@ section{
                   background:-webkit-linear-gradient(0deg,$secondColor,$primaryColor);
                   -webkit-background-clip: text;
                   -webkit-text-fill-color:transparent; 
-                  animation-name: color-coeur 1s ease-in both;
-                  @keyframes color-coeur {
+                  animation-name: couleur 100ms ease-in both;
+                  @keyframes couleur {
                       0%{
                           opacity: 0;
                       }
