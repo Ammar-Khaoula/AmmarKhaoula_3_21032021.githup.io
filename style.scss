@@ -374,7 +374,7 @@ nav{
                     transform: scaleX(1);
                 }
                 & .cercle i{
-                    animation: rotation 200ms ease-in 100ms alternate;
+                    animation: rotation 300ms ease-in 100ms alternate;
                 }
                 @keyframes rotation {
                     0%{transform: rotate(0deg);}
