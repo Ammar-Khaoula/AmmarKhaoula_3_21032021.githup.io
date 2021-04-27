@@ -364,7 +364,7 @@ nav img {
   transform: scaleX(1);
 }
 .menu-food article .link-food:hover .cercle i {
-  animation: rotation 300ms ease-in 0.5s alternate;
+  animation: rotation 200ms ease-in 100ms alternate;
 }
 @keyframes rotation {
   0% {
