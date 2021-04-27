@@ -2,6 +2,7 @@ $primaryColor:#9356DC;
 $opacityprimo:rgba(147,86,220,0.2);
 $secondColor:#FF79DA;
 $tertiaireColor:#99E2D0;
+$opacitytertiare:#28a183;
 %family{
     font-family: 'Roboto', sans-serif;
 }
@@ -215,7 +216,7 @@ section{
        text-decoration: none;
        color: black;
        h3{
-        color: #0d8869;
+        color: $opacitytertiare;
         background-color: $tertiaireColor;
         border: 0px black solid;
         width: 90px;
@@ -368,13 +369,22 @@ nav{
                 margin: 30px 5px;
             }
             &:hover{
-                & .fas{
-                    opacity: 0.1;
+                & .cercle{
+                    opacity: 1;
+                    transform: scaleX(1);
                 }
+                & .cercle i{
+                    animation: rotation 300ms ease-in .5s alternate;
+                }
+                @keyframes rotation {
+                    0%{transform: rotate(0deg);}
+                    100%{transform: rotate(360deg);}
+                }
+
+                
                 /* décalage de prix au survole  */
                 & span{
-                    position: absolute;
-                    animation-delay: -5s;
+                    position: absolute;   
                     transform: translateX(-40px) translateY(15px) ;
                 }
                 /* animation de ... au survole si la phrase est longue */
@@ -415,25 +425,33 @@ nav{
                 opacity: 0.7;   
             }
             /* animation d'apparaître une petite coche à la clic du plat */
-            .fas{
+            .cercle{
                 @extend%border;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
-                background-color:$tertiaireColor;
+                background-color:$opacitytertiare;
                 width: 35px;
                 height: 40px;
                 padding-left: 20px;
                 padding-top: 30px;
-                font-size: 20px;
-                color: white;
                 opacity: 0;
+                position: relative;
+                transform: translateX(50px);
+                transform-origin: top right;
+                transform: scaleX(0);        
+                transition: all .5s linear;
                &:active{
-                   opacity: 1;
+                   opacity: .6;
                    animation-fill-mode: both;
                    animation-delay: 1s;
                    animation-duration: 1s;     
                }
-            }    
+            }
+            .cercle i{
+                font-size: 20px;
+                color: white;
+                padding-bottom: 5px;
+            }   
          }
      }
 }
